@@ -1,55 +1,306 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>La Redonda - Alquila Tu Cancha</title>
-    <link rel="stylesheet" href="style.css">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title> F5 | Alquiler de Canchas</title>
+<meta name="description" content="La Redonda F5 - Alquiler de canchas de fútbol 5, canchitas para cumpleaños y cancha de hockey. Reservá tu turno online.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Anton&family=Space+Mono:wght@400;700&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <main class="atc-container">
-        <header class="venue-header">
-            <div class="venue-info">
-                <h1>La Redonda</h1>
-                <p class="location">📍 Paraná, Entre Ríos</p>
-                <p class="description">Fútbol 5 • Hockey • Cumpleaños | Abierto de 14:00 a 00:00 hs</p>
-            </div>
-        </header>
 
-        <section class="days-selector-wrapper">
-            <h3>Seleccioná el día:</h3>
-            <div class="days-container" id="days-bar">
-                </div>
-        </section>
+<!-- ===== HEADER ===== -->
+<header class="header" id="header">
+  <div class="header__inner container">
+    <a href="#inicio" class="logo">
+      <span class="logo__mark">●</span>
+      <span class="logo__text">NOMBRE <em>F5</em></span>
+    </a>
 
-        <section class="venues-list" id="canchas-container">
-            </section>
+    <nav class="nav" id="nav">
+      <a href="#inicio" class="nav__link">Inicio</a>
+      <a href="#canchas" class="nav__link">Canchas</a>
+      <a href="#horarios" class="nav__link">Horarios</a>
+      <a href="#reserva" class="nav__link">Reservas</a>
+      <a href="#contacto" class="nav__link">Contacto</a>
+    </nav>
 
-        <footer class="venue-footer">
-            <h3>Contacto y Ubicación</h3>
-            <div class="footer-links">
-                <a href="https://wa.me/3434468191" target="_blank" class="footer-btn whatsapp">💬 WhatsApp</a>
-                <a href="https://www.instagram.com/laredonda.futbol5?igsh=b3NscHp3Mjl2MGp1" target="_blank" class="footer-btn instagram">📸 Instagram</a>
-                <a href="https://maps.app.goo.gl/ZTWtpzqEPDV3v1an7" target="_blank" class="footer-btn maps">📍 Cómo llegar</a>
-            </div>
-        </footer>
+    <a href="#reserva" class="btn btn--accent btn--sm header__cta">Reservar turno</a>
 
-        <div class="modal" id="modal-reserva">
-            <div class="modal-content">
-                <h2>Confirmar Turno</h2>
-                <p id="modal-detalles-turno"></p>
-                <form id="form-confirmar">
-                    <input type="text" id="nombre-cliente" placeholder="Tu nombre y apellido" required>
-                    <input type="tel" id="tel-cliente" placeholder="WhatsApp (Ej: 343...)" required>
-                    <div class="modal-actions">
-                        <button type="button" class="btn-secondary" id="btn-cerrar-modal">Cancelar</button>
-                        <button type="submit" class="btn-primary">Reservar por WhatsApp</button>
-                    </div>
-                </form>
-            </div>
+    <button class="hamburger" id="hamburger" aria-label="Abrir menú" aria-expanded="false">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+</header>
+
+<!-- ===== HERO ===== -->
+<section class="hero" id="inicio">
+  <div class="hero__stripes" aria-hidden="true"></div>
+  <div class="hero__content container">
+    <p class="eyebrow">Fútbol 5 · Cumpleaños · Hockey</p>
+    <h1 class="hero__title">NOMBRE<span>F5</span></h1>
+    <p class="hero__subtitle">Tu cancha, tu equipo, tu horario. Reservá el turno en menos de un minuto y armá el partido.</p>
+    <div class="hero__actions">
+      <a href="#reserva" class="btn btn--accent">Reservar ahora</a>
+      <a href="#canchas" class="btn btn--ghost">Ver canchas</a>
+    </div>
+  </div>
+  <div class="hero__scroll" aria-hidden="true">
+    <span></span>
+    <p>desplazate</p>
+  </div>
+</section>
+
+<!-- ===== CANCHAS ===== -->
+<section class="canchas" id="canchas">
+  <div class="container">
+    <p class="section-eyebrow">01 — Nuestro predio</p>
+    <h2 class="section-title">Tres canchas, un solo lugar</h2>
+
+    <div class="canchas__grid">
+
+      <article class="card-cancha" data-tipo="futbol5">
+        <div class="card-cancha__top">
+          <svg class="card-cancha__icon" viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <rect x="6" y="14" width="52" height="36" rx="3" stroke="currentColor" stroke-width="2.5"/>
+            <circle cx="32" cy="32" r="7" stroke="currentColor" stroke-width="2.5"/>
+            <line x1="32" y1="14" x2="32" y2="50" stroke="currentColor" stroke-width="2.5"/>
+            <path d="M6 22h8v20H6z" stroke="currentColor" stroke-width="2.5"/>
+            <path d="M58 22h-8v20h8z" stroke="currentColor" stroke-width="2.5"/>
+          </svg>
         </div>
-    </main>
+        <h3>Fútbol 5/ Hockey </h3>
+        <p>Césped sintético de última generación, iluminación LED y arcos reglamentarios. Dos canchas disponibles.</p>
+        <div class="card-cancha__meta">
+          <span><strong>$25.000</strong> / turno</span>
+          <span>60 min</span>
+        </div>
+        <button class="btn btn--outline card-cancha__btn" data-tipo-select="futbol5">Reservar</button>
+      </article>
 
-    <script src="app.js"></script>
+      <article class="card-cancha" data-tipo="futbol5">
+        <div class="card-cancha__top">
+          <svg class="card-cancha__icon" viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <rect x="6" y="14" width="52" height="36" rx="3" stroke="currentColor" stroke-width="2.5"/>
+            <circle cx="32" cy="32" r="7" stroke="currentColor" stroke-width="2.5"/>
+            <line x1="32" y1="14" x2="32" y2="50" stroke="currentColor" stroke-width="2.5"/>
+            <path d="M6 22h8v20H6z" stroke="currentColor" stroke-width="2.5"/>
+            <path d="M58 22h-8v20h8z" stroke="currentColor" stroke-width="2.5"/>
+          </svg>
+        </div>
+        <h3>Fútbol 5/ Hockey </h3>
+        <p>Césped sintético de última generación, iluminación LED y arcos reglamentarios. Dos canchas disponibles.</p>
+        <div class="card-cancha__meta">
+          <span><strong>$25.000</strong> / turno</span>
+          <span>60 min</span>
+        </div>
+        <button class="btn btn--outline card-cancha__btn" data-tipo-select="futbol5">Reservar</button>
+      </article>
+
+      <article class="card-cancha" data-tipo="futbol5">
+        <div class="card-cancha__top">
+          <svg class="card-cancha__icon" viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <rect x="6" y="14" width="52" height="36" rx="3" stroke="currentColor" stroke-width="2.5"/>
+            <circle cx="32" cy="32" r="7" stroke="currentColor" stroke-width="2.5"/>
+            <line x1="32" y1="14" x2="32" y2="50" stroke="currentColor" stroke-width="2.5"/>
+            <path d="M6 22h8v20H6z" stroke="currentColor" stroke-width="2.5"/>
+            <path d="M58 22h-8v20h8z" stroke="currentColor" stroke-width="2.5"/>
+          </svg>
+        </div>
+        <h3>Fútbol 5/ Hockey </h3>
+        <p>Césped sintético de última generación, iluminación LED y arcos reglamentarios. Dos canchas disponibles.</p>
+        <div class="card-cancha__meta">
+          <span><strong>$25.000</strong> / turno</span>
+          <span>60 min</span>
+        </div>
+        <button class="btn btn--outline card-cancha__btn" data-tipo-select="futbol5">Reservar</button>
+      </article>
+
+    </div>
+  </div>
+</section>
+<!-- ===== SECCION CUMPLEAÑOS ===== -->
+<section class="cumpleanos" id="cumpleanos" style="background: #1a1a1a; padding: 5rem 0; border-top: 1px solid #333;">
+  <div class="container" style="max-width: 750px; margin: 0 auto; text-align: center;">
+    <p class="section-eyebrow" style="color: var(--accent-color, #a3e635);">Eventos exclusivos</p>
+    <h2 class="section-title" style="color: #fff; margin-bottom: 1.5rem;">¡Festejá tu cumple en NOMBRE!</h2>
+    
+    <p style="font-size: 1.1rem; line-height: 1.7; margin-bottom: 2.5rem; color: #ccc;">
+      Contamos con un <strong>espacio techado exclusivo</strong> ideal para los más chicos. El alquiler incluye la canchita privada, sector de mesas, living para los padres, sonido y total seguridad para que el festejo sea perfecto.
+    </p>
+
+    <div style="background: #222; padding: 2rem; border-radius: 12px; margin-bottom: 2.5rem; text-align: left; border: 1px solid #444;">
+      <p style="font-weight: bold; margin-bottom: 1rem; color: #fff; font-family: 'Space Mono', monospace;">¿QUÉ INCLUYE EL COMBO CUMPLE?</p>
+      <ul style="list-style: none; padding: 0; display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 1rem; color: #bbb;">
+        <li>⚽ Canchita techada exclusiva</li>
+        <li>🍔 Sector de parrilla y mesas</li>
+        <li>🔊 Sonido para música ambiente</li>
+        <li>🎈 Armado y espacio privado</li>
+      </ul>
+    </div>
+
+    <p style="font-weight: 600; margin-bottom: 1.5rem; color: #fff;">La reserva y organización de eventos se gestiona únicamente de forma personalizada.</p>
+    
+    <!-- Botón directo a tu WhatsApp con mensaje prearmado -->
+    <a href="https://wa.me/543434478910?text=Hola!%20Quiero%20consultar%20disponibilidad%20y%20precios%20para%20un%20cumpleaños%20en%20el%20complejo." 
+       target="_blank" 
+       rel="noopener" 
+       class="btn btn--accent">
+      Consultar por WhatsApp
+    </a>
+  </div>
+</section>
+<!-- ===== HORARIOS ===== -->
+<section class="horarios" id="horarios">
+  <div class="container horarios__inner">
+    <div class="horarios__text">
+      <p class="section-eyebrow section-eyebrow--light">02 — Atención</p>
+      <h2 class="section-title section-title--light">Horarios del predio</h2>
+      <p class="horarios__desc">Abrimos todos los días del año. Los fines de semana extendemos el horario para que el partido no tenga que terminar nunca.</p>
+    </div>
+    <div class="horarios__cards">
+      <div class="horario-card">
+        <p class="horario-card__dias">Domingo a Jueves</p>
+        <p class="horario-card__rango">10:00 <span>—</span> 23:00</p>
+      </div>
+      <div class="horario-card horario-card--accent">
+        <p class="horario-card__dias">Viernes y Sábado</p>
+        <p class="horario-card__rango">14:00 <span>—</span> 01:00</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== RESERVA ===== -->
+<section class="reserva" id="reserva">
+  <div class="container">
+    <p class="section-eyebrow">03 — Reservá</p>
+    <h2 class="section-title">Sacá tu turno</h2>
+    <p class="reserva__sub">Elegí la cancha, el día y el horario. Confirmamos tu reserva al instante por WhatsApp.</p>
+
+    <div class="reserva__board">
+
+      <!-- paso 1 -->
+  <div class="tipo-grid" id="tipoGrid">
+  <button class="tipo-btn" data-tipo="cancha1" type="button">
+    <span class="tipo-btn__nombre">Cancha 1</span>
+    <span class="tipo-btn__detalle">Fútbol 5 / Hockey · 60 min</span>
+  </button>
+  <button class="tipo-btn" data-tipo="cancha2" type="button">
+    <span class="tipo-btn__nombre">Cancha 2</span>
+    <span class="tipo-btn__detalle">Fútbol 5 / Hockey · 60 min</span>
+  </button>
+  <button class="tipo-btn" data-tipo="cancha3" type="button">
+    <span class="tipo-btn__nombre">Cancha 3</span>
+    <span class="tipo-btn__detalle">Fútbol 5 / Hockey · 60 min</span>
+  </button>
+</div>
+
+      <!-- paso 2 -->
+   <div class="reserva__step" data-step="2">
+        <p class="reserva__step-label"><span>02</span> Elegí el día</p>
+        <div class="fecha-carrusel" id="fechaCarrusel">
+          <div class="fechas-lista" id="fechasLista"></div>
+        </div>
+        <p class="reserva__hint" id="diaHint">Primero elegí una cancha</p>
+      </div>
+
+      <!-- paso 3 -->
+      <div class="reserva__step" data-step="3">
+        <p class="reserva__step-label"><span>03</span> Elegí el horario</p>
+        <div class="scoreboard" id="scoreboard">
+          <p class="scoreboard__empty" id="scoreboardEmpty">Seleccioná cancha y fecha para ver los turnos disponibles</p>
+        </div>
+        <div class="reserva__legend">
+          <span><i class="dot dot--free"></i> Disponible</span>
+          <span><i class="dot dot--sel"></i> Seleccionado</span>
+          <span><i class="dot dot--busy"></i> Ocupado</span>
+        </div>
+      </div>
+
+      <!-- paso 4 -->
+      <div class="reserva__step" data-step="4">
+        <p class="reserva__step-label"><span>04</span> Tus datos</p>
+        <form id="reservaForm" class="reserva-form">
+          <div class="reserva-form__row">
+            <label>
+              <span>Nombre y apellido</span>
+              <input type="text" id="nombreInput" placeholder="Ej: Juan Pérez" required>
+            </label>
+            <label>
+              <span>Teléfono</span>
+              <input type="tel" id="telefonoInput" placeholder="Ej: 343 555 1234" required>
+            </label>
+          </div>
+          <label>
+            <span>Email (opcional)</span>
+            <input type="email" id="emailInput" placeholder="tu@email.com">
+          </label>
+
+          <div class="reserva-resumen" id="reservaResumen">
+            <p class="reserva-resumen__title">Resumen de la reserva</p>
+            <ul>
+              <li><span>Cancha</span><strong id="resumenTipo">—</strong></li>
+              <li><span>Fecha</span><strong id="resumenFecha">—</strong></li>
+              <li><span>Horario</span><strong id="resumenHora">—</strong></li>
+              <li><span>Precio</span><strong id="resumenPrecio">—</strong></li>
+            </ul>
+          </div>
+
+          <button type="submit" class="btn btn--accent reserva-form__submit" id="confirmarBtn" disabled>
+            Confirmar reserva
+          </button>
+          <p class="reserva-form__nota">Al confirmar, te vamos a redirigir a WhatsApp para cerrar el turno con seña.</p>
+        </form>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- ===== MODAL CONFIRMACION ===== -->
+<div class="modal" id="modalConfirm">
+  <div class="modal__card">
+    <button class="modal__close" id="modalClose" aria-label="Cerrar">×</button>
+    <div class="modal__icon">✓</div>
+    <h3>¡Turno reservado!</h3>
+    <p id="modalText">Te esperamos en NOMBRE F5.</p>
+    <button class="btn btn--accent" id="modalWhatsapp">Confirmar por WhatsApp</button>
+  </div>
+</div>
+
+<!-- ===== CONTACTO / FOOTER ===== -->
+<footer class="footer" id="contacto">
+  <div class="container footer__inner">
+    <div class="footer__brand">
+      <span class="logo__text logo__text--footer">NOMBRE<em>F5</em></span>
+      <p>Canchas de fútbol 5, cumpleaños y hockey. Todos los días del año.</p>
+    </div>
+    <div class="footer__col">
+      <h4>Contacto</h4>
+      <p>📍 UBI</p>
+      <p>📞 343 400-0000</p>
+      <a href="https://wa.me/" target="_blank" rel="noopener">💬 Escribinos por WhatsApp</a>
+    </div>
+    <div class="footer__col">
+      <h4>Horarios</h4>
+      <p>Dom a Jue: 10:00 – 23:00</p>
+      <p>Vie y Sáb: 14:00 – 01:00</p>
+    </div>
+    <div class="footer__col">
+      <h4>Seguinos</h4>
+      <a href="#" target="_blank" rel="noopener">Instagram</a>
+      <a href="#" target="_blank" rel="noopener">Facebook</a>
+    </div>
+  </div>
+  <p class="footer__copy">© <span id="anioActual"></span> NOMBRE F5 — Todos los derechos reservados</p>
+</footer>
+
+<script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+<script src="app.js"></script>
+
 </body>
 </html>
